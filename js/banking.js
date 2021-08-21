@@ -9,11 +9,7 @@ function getInputValue(inputId){
 
 // deposit
 document.getElementById('deposit-button').addEventListener('click', function(){
-/*    
-    const depositInput = document.getElementById('deposit-input');
-    const depositInputText = depositInput.value;
-    const depositAmount = parseFloat(depositInputText); 
-    */
+
     const depositAmount = getInputValue('deposit-input');
     // get current deposit
     const depositTotal = document.getElementById('deposit-total');
@@ -33,9 +29,7 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const withdrawTotal = document.getElementById('withdraw-total');
     const previouswithdrawText = withdrawTotal.innerText;
     const previousWithdrawTotalAmount = parseFloat(previouswithdrawText);
-/*     const withdrawInput = document.getElementById('withdraw-input');
-    const withdrawInputText =  withdrawInput.value;
-    const withdrawInputAmount = parseFloat(withdrawInputText); */
+
     const withdrawInputAmount = getInputValue('withdraw-input')
     const currentTotalWithdraw = withdrawInputAmount + previousWithdrawTotalAmount;
     withdrawTotal.innerText = currentTotalWithdraw;
